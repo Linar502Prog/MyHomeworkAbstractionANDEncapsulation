@@ -35,9 +35,9 @@ public:
 int main() {
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
-	std::ifstream file("C:\\Users\\Линар\\OneDrive\\Desktop\\Новый текстовый документ (3).txt");
+	std::ifstream file("C:\\Users\\Г‹ГЁГ­Г Г°\\OneDrive\\Desktop\\ГЌГ®ГўГ»Г© ГІГҐГЄГ±ГІГ®ГўГ»Г© Г¤Г®ГЄГіГ¬ГҐГ­ГІ (3).txt");
 	if (!file.is_open()) {
-		std::cout << "Ошибка чтения файла " << std::endl;
+		std::cout << "ГЋГёГЁГЎГЄГ  Г·ГІГҐГ­ГЁГї ГґГ Г©Г«Г  " << std::endl;
 	}
 	else {
 		std::string city, street;
@@ -54,9 +54,9 @@ int main() {
 			arr[i] = Space(city, street, house_num, flat_num);
 		}
 		file.close();
-		std::ofstream out_file("C:\\Users\\Линар\\OneDrive\\Desktop\\Новый текстовый документ (4).txt");
+		std::ofstream out_file("C:\\Users\\Г‹ГЁГ­Г Г°\\OneDrive\\Desktop\\ГЌГ®ГўГ»Г© ГІГҐГЄГ±ГІГ®ГўГ»Г© Г¤Г®ГЄГіГ¬ГҐГ­ГІ (4).txt");
 		if (!out_file.is_open()) {
-			std::cout << "Ошибка открытия файла " << std::endl;
+			std::cout << "ГЋГёГЁГЎГЄГ  Г®ГІГЄГ°Г»ГІГЁГї ГґГ Г©Г«Г  " << std::endl;
 		}
 		else {
 			out_file << N << std::endl;
@@ -64,7 +64,7 @@ int main() {
 				out_file << arr[i].get_City() << ", " << arr[i].get_Street() << ", "
 					<< arr[i].get_house_number() << ", " << arr[i].get_flat_number() << std::endl;
 			}
-			std::cout << "Файл успешно обновлен. " << std::endl;
+			std::cout << "Г”Г Г©Г« ГіГ±ГЇГҐГёГ­Г® Г®ГЎГ­Г®ГўГ«ГҐГ­. " << std::endl;
 		}
 		out_file.close();
 	}
