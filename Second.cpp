@@ -17,6 +17,8 @@ public:
 	adress() {
 
 	}
+	~adress(){
+	}
 	std::string get_city(){
 		return City;
 	}
@@ -47,9 +49,9 @@ int main() {
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
-	std::ifstream in("C:\\Users\\Линар\\OneDrive\\Desktop\\Новый текстовый документ (3).txt");
+	std::ifstream in("C:\\Users\\Г‹ГЁГ­Г Г°\\OneDrive\\Desktop\\ГЌГ®ГўГ»Г© ГІГҐГЄГ±ГІГ®ГўГ»Г© Г¤Г®ГЄГіГ¬ГҐГ­ГІ (3).txt");
 	if (!in.is_open()) {
-		std::cout << "Ошибка чтения файла" << std::endl;
+		std::cout << "ГЋГёГЁГЎГЄГ  Г·ГІГҐГ­ГЁГї ГґГ Г©Г«Г " << std::endl;
 	}
 	else {
 		int N, house_num, flat_num;
@@ -67,9 +69,9 @@ int main() {
 			arr[i]=adress(city, street, house_num, flat_num);
 		}
 		in.close();
-		std::ofstream out("C:\\Users\\Линар\\OneDrive\\Desktop\\Новый текстовый документ (4).txt");
+		std::ofstream out("C:\\Users\\Г‹ГЁГ­Г Г°\\OneDrive\\Desktop\\ГЌГ®ГўГ»Г© ГІГҐГЄГ±ГІГ®ГўГ»Г© Г¤Г®ГЄГіГ¬ГҐГ­ГІ (4).txt");
 		if (!out.is_open()) {
-			std::cout << "Ошибка открытия файла" << std::endl;
+			std::cout << "ГЋГёГЁГЎГЄГ  Г®ГІГЄГ°Г»ГІГЁГї ГґГ Г©Г«Г " << std::endl;
 		}
 		my_sort(arr, N);
 		out << N << std::endl;
@@ -77,7 +79,8 @@ int main() {
 			out << arr[i].get_city() << ", " << arr[i].get_street() << ", " << arr[i].get_house_number() << ", " 
 				<< arr[i].get_flat_number() << std::endl;
 		}
-		std::cout << "Файл успешно обновлен" << std::endl;
+		std::cout << "Г”Г Г©Г« ГіГ±ГЇГҐГёГ­Г® Г®ГЎГ­Г®ГўГ«ГҐГ­" << std::endl;
 	}
+	delete[] arr;
 	return EXIT_SUCCESS;
 }
