@@ -19,6 +19,8 @@ public:
 	}
 	Space() {
 	}
+	~Space(){
+	}
 	std::string get_City() {
 		return City;
 	}
@@ -68,4 +70,6 @@ int main() {
 		}
 		out_file.close();
 	}
+	delete[] arr;
+	return EXIT_SUCCESS;
 }
